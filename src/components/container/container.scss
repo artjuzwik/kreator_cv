@@ -1,3 +1,10 @@
 .container.main{
   min-height:500px;
+  >.row{
+    min-height:100%;
+  }
+  .action{
+    background-color:white;
+    padding:20px 0;
+  }
 }

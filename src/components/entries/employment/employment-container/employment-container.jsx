@@ -1,10 +1,24 @@
 import React from 'react';
+import CompanyName from '../company-name/company-name.jsx';
+import Position from '../position/position.jsx';
+import Adress from '../adress/adress.jsx';
+import Time from '../time/time.jsx';
+import Description from '../description/description.jsx';
+import Add from '../add/add.jsx';
+
 
 
 export default function EmploymentContainer(){
     return(
-        <div className="container">
-            basics container
+        <div className="container employment">
+            <h2 className="mainTitle">Twoje doświadczenie zawodowe</h2>
+            <p className="mainP">Najlepiej zacznij od najnowszego, do najstarszego</p>
+            <CompanyName />
+            <Position />
+            <Adress />
+            <Time />
+            <Description />
+            <Add />
         </div>
     )
 }
