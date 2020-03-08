@@ -3,6 +3,9 @@ const initState = {
         name:'',
         secondName: '',
         email:'',
+    },
+    employment:{
+
     }
 }
 export default initState;
