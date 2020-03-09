@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { handleCompanyInput } from '../../../../actions/employment/company-name-actions/company-name-actions.js'
+import { handleCompanyInput } from '../../../../actions/employment/company-name-actions/company-name-actions.js';
 import '../../assets/common.scss';
 import {store} from "../../../../store/store";
 
@@ -24,5 +24,5 @@ export default class CompanyName extends React.Component{
 const mapStateToProps = state => {
     return { employment: state.employment }
 };
-const mapDispatchToProps = { handleCompanyInput };  
+const mapDispatchToProps = { handleCompanyInput };
 CompanyName = connect(mapStateToProps, mapDispatchToProps)(CompanyName)

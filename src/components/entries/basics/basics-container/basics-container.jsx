@@ -5,7 +5,6 @@ import Photo from '../photo/photo.jsx';
 import Email from '../email/email.jsx';
 import Number from '../number/number.jsx';
 
-import './basics-container.scss';
 
 export default function BasicsContainer(){
     return(

@@ -1,0 +1,27 @@
+.time{
+  .datepicker-label{
+    position:relative;
+    font-family: roboto;
+    width:100%;
+    .form-control{
+      padding: 15px 10px 0px 10px;
+      height: 50px;
+      font-size: 13px;
+      background-color:#fafafa;
+    }
+    .title{
+      padding:3px 0 0 10px;
+      position:absolute;
+      font-size:13px;
+    }
+  }
+  .checkbox-label{
+    height:50px;
+    .checkboxInput{
+      margin:0 10px 0 0;
+    }
+  }
+  .time-to{
+
+  }
+}

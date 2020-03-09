@@ -12,6 +12,7 @@ import RoutesSteps from '../../routing/routes.js'
 import BasicsContainer from '../entries/basics/basics-container/basics-container.jsx'
 import EmploymentContainer from '../entries/employment/employment-container/employment-container.jsx'
 import EducationContainer from '../entries/education/education-container/education-container.jsx'
+import SkillsContainer from '../entries/skills/skills-container/skills-container.jsx'
 import Nav from '../nav/nav.jsx'
 
 import './container.scss'
@@ -32,9 +33,10 @@ export default function Container(){
                             <Route path={RoutesSteps[2]}>
                                 <EducationContainer />
                             </Route>
+                            <Route path={RoutesSteps[3]}>
+                                <SkillsContainer />
+                            </Route>
                         </Switch>
-
-
                         <Nav />
                     </Router>
                 </div>
