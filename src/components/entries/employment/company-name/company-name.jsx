@@ -24,5 +24,5 @@ export default class CompanyName extends React.Component{
 const mapStateToProps = state => {
     return { employment: state.employment }
 };
-const mapDispatchToProps = { handleCompanyInput }; 
+const mapDispatchToProps = { handleCompanyInput };  
 CompanyName = connect(mapStateToProps, mapDispatchToProps)(CompanyName)
