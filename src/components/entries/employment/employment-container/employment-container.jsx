@@ -4,7 +4,7 @@ import Position from '../position/position.jsx';
 import Adress from '../adress/adress.jsx';
 import Time from '../time/time.jsx';
 import Description from '../description/description.jsx';
-import Add from '../add/add.jsx';
+import AddCompany from '../add-company/add-company.jsx';
 
 
 
@@ -18,7 +18,7 @@ export default function EmploymentContainer(){
             <Adress />
             <Time />
             <Description />
-            <Add />
+            <AddCompany />
         </div>
     )
 }

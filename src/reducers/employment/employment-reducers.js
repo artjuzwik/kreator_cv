@@ -1,4 +1,15 @@
-const EmploymentReducer = (state = {}, action) => {
+const initState2 = {
+    employment:{
+        company: '',
+        position:'',
+        www:'',
+        timeFrom:'',
+        timeTo:'',
+        description:'',
+    },
+    employmentArr: []
+};
+const EmploymentReducer = (state = initState2, action) => {
     switch(action.type) {
         case 'ADD_COMPANY':
             return { ...state, employment: {...state.employment, company: action.payload } };
@@ -12,6 +23,11 @@ const EmploymentReducer = (state = {}, action) => {
             return { ...state, employment: {...state.employment, timeTo: action.payload} };
         case 'ADD_DESCRIPTION':
             return { ...state, employment: {...state.employment, description: action.payload}};
+        case 'ADD_COMPANY_OBJ':
+            return { ...state, employmentArr: [...state.employmentArr,action.payload] };
+        case 'REMOVE_COMPANY_OBJ':
+            delete state.employmentArr[action.payload];
+            return { ...state, employmentArr: [...state.employmentArr ]};
         default:
             return state;
     }

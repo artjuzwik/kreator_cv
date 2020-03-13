@@ -1,0 +1,35 @@
+.cv-view{
+  background-color:white;
+  .cv-preview{
+    .job-container,.school-container{
+      margin-bottom:15px;
+    }
+    .job-container{
+
+    }
+    .main-title{
+      font-family:Roboto;
+      font-size: 40px;
+      padding: 10px 0 0 15px;
+      margin: 0 0 25px;
+    }
+    .subheader{
+      font-family:Roboto;
+      font-size:20px;
+    }
+    p{
+      margin-bottom:5px;
+    }
+    .star-ratings{
+      margin-bottom: 10px;
+      position: relative;
+      top: -5px;
+      .star-container{
+        .widget-svg{
+          width:20px !important;
+          height:20px !important;
+        }
+      }
+    }
+  }
+}

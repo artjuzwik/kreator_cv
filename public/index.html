@@ -12,6 +12,25 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap&subset=latin-ext" rel="stylesheet">
     <title>React App</title>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRJPtRFF9BZjy7V_VErzNcaq3Q4DVx4rs",
+        authDomain: "kreator-cv.firebaseapp.com",
+        databaseURL: "https://kreator-cv.firebaseio.com",
+        projectId: "kreator-cv",
+        storageBucket: "kreator-cv.appspot.com",
+        messagingSenderId: "109708933952",
+        appId: "1:109708933952:web:4b5e7f6ea8cdd77a6a18a5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

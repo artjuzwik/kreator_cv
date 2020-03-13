@@ -1,46 +1,30 @@
 import React from 'react'
 import RoutesSteps from '../../routing/routes.js'
-import {
-    Link,
-    useHistory,
-    useLocation
-} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import {store} from "../../store/store";
+import { saveToStorage } from "../../saveMethods/saveMethods.js";
 import './nav.scss'
 
 export default class Nav extends React.Component{
     constructor(){
-        super()
+        super();
         this.state = {
-            oneButton: false,
             currentIndex:'',
             previousStep:'',
             nextStep:'',
-        }
-        this.setInitoneButton = this.setInitoneButton.bind(this);
+        };
         this.countStepsOnload = this.countStepsOnload.bind(this);
         this.countSteps = this.countSteps.bind(this);
-    }
-    setInitoneButton(){
-        if(window.location.pathname === '/personalne'){
-            this.setState({
-                oneButton: true
-            })
-        }else{
-            this.setState({
-                oneButton: false
-            })
-        }
     }
     countStepsOnload(){
         let locationPathName = window.location.pathname;
         for(let i = 0; i < RoutesSteps.length; i++){
-           if(locationPathName == RoutesSteps[i]){
+           if(locationPathName === RoutesSteps[i]){
               this.setState({
                   previousStep: RoutesSteps[i - 1],
                   nextStep: RoutesSteps[i + 1],
                   currentIndex: i
-              }, () => {console.log(this.state, 'the state', i);})
+              })
            }
         }
     }
@@ -74,29 +58,46 @@ export default class Nav extends React.Component{
     }
 
     componentDidMount(){
-        this.setInitoneButton()
         this.countStepsOnload()
     }
 
     render(){
         return(
-            <div className="navi container">
+            <div className="navi">
                 <div className="row">
                     <div className="col-lg-6" >
-                        <Link
-                            className="btn btn-primary"
-                            onClick={() => {this.countSteps(this.state.previousStep)}}
-                            to={this.state.previousStep}>
+                        {this.state.previousStep === undefined ?
+                            null
+                            :
+                            <Link
+                                className="btn btn-primary"
+                                onClick={() => {
+                                    this.countSteps(this.state.previousStep)
+                                }}
+                                to={this.state.previousStep}>
                                 Powrót
-                        </Link>
+                            </Link>
+                        }
                     </div>
-                    <div className="col-lg-6">
-                        <Link
-                            className="btn btn-success"
-                            onClick={() => {this.countSteps(this.state.nextStep)}}
-                            to={this.state.nextStep}>
+                    <div className={this.state.previousStep === undefined ? 'col-lg-12' : 'col-lg-6'}>
+                        {this.state.nextStep === undefined ?
+                            <button
+                                className="btn btn-success"
+                                onClick={() => {
+                                    saveToStorage('cv-data',store.getState())
+                                }}>
+                                Zapisz
+                            </button>
+                            :
+                            <Link
+                                className="btn btn-success"
+                                onClick={() => {
+                                    this.countSteps(this.state.nextStep)
+                                }}
+                                to={this.state.nextStep}>
                                 Dalej
-                        </Link>
+                            </Link>
+                        }
                         </div>
                     </div>
             </div>

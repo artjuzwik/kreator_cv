@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handlePositionInput } from '../../../../actions/employment/position-actions/positions-actions.js';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class Position extends React.Component{
     render(){
@@ -15,7 +14,7 @@ export default class Position extends React.Component{
                         className="simpleInput form-control"
                         type="text"
                         placeholder="Wpisz pozycję"
-                        onChange={(evt) => {handlePositionInput(evt); console.log(store.getState())}} />
+                        onChange={(evt) => {handlePositionInput(evt)}} />
                 </label>
             </div>
         )

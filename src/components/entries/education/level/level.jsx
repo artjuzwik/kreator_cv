@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handleLevelInput  } from '../../../../actions/education/level-actions/level-actions.jsx';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class Level extends React.Component{
     render(){
@@ -15,7 +14,7 @@ export default class Level extends React.Component{
                         className="simpleInput form-control"
                         type="email"
                         placeholder="Wpisz poziom"
-                        onChange={(evt) => {handleLevelInput(evt); console.log(store.getState())}}/>
+                        onChange={(evt) => {handleLevelInput(evt);}}/>
                 </label>
             </div>
         )

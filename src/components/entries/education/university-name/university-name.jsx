@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handleUniversityNameInput } from '../../../../actions/education/university-name-actions/university-name-actions.jsx';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class UniversityName extends React.Component{
     render(){
@@ -15,7 +14,7 @@ export default class UniversityName extends React.Component{
                         className="simpleInput form-control"
                         type="email"
                         placeholder="Wpisz nazwę szkoły"
-                        onChange={(evt) => {handleUniversityNameInput(evt); console.log(store.getState())}}/>
+                        onChange={(evt) => {handleUniversityNameInput(evt)}}/>
                 </label>
             </div>
         )

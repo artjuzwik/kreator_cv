@@ -5,7 +5,7 @@ import '../../assets/common.scss';
 
 export default class Number extends React.Component{
     render(){
-        const { basic, handleNumberInput } = this.props
+        const { handleNumberInput } = this.props
         return(
             <div className="row number">
                 <label className="simpleInput-label form-group col-lg-12">
@@ -20,8 +20,5 @@ export default class Number extends React.Component{
         )
     }
 }
-const mapsStateToProps = (state) => {
-    return { basic: state.basic };
-};
 const mapDispatchToProps = { handleNumberInput };
-Number = connect(mapsStateToProps, mapDispatchToProps)(Number);
+Number = connect(null, mapDispatchToProps)(Number);

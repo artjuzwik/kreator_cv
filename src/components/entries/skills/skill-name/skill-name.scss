@@ -2,36 +2,19 @@
   .simpleInput-label{
     width:100%;
   }
-  .styled-checkbox-input{
-    display: inline-block;
-    position: relative;
-    top: -9px;
-    padding: 0;
-    margin:0 10px 0 0;
-    cursor: pointer;
-    font-size:25px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    input{
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      width:25px;
-      height:25px;
-    }
-    input:checked + .star-unchecked{
-      display:none;
-      vertical-align: middle;
-      //position: relative;
-      //top: -7px;
-    }
-    input:checked + .star-unchecked + .star-checked{
-      display:inline-block;
-    }
-    input + .star-unchecked + .star-checked{
-      display:none;
+  .rating{
+    .star-ratings{
+      top:-10px !important;
+      .star-container{
+        width:20px;
+        height:20px;
+        padding: 0 !important;
+        margin:0 5px 0 0;
+        .widget-svg{
+          width:20px !important;
+          height:20px !important;
+        }
+      }
     }
   }
 }

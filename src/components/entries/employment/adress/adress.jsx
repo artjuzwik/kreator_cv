@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handleAdressInput } from '../../../../actions/employment/www-actions/www-actions.js';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class Adress extends React.Component{
     render(){
@@ -15,7 +14,7 @@ export default class Adress extends React.Component{
                         className="simpleInput form-control"
                         type="text"
                         placeholder="Wpisz adres witryny"
-                        onChange={(evt) => {handleAdressInput(evt); console.log(store.getState())}}/>
+                        onChange={(evt) => {handleAdressInput(evt)}}/>
                 </label>
             </div>
         )

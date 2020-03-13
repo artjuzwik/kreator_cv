@@ -33,7 +33,7 @@ export default class Time extends React.Component{
                             className="simpleInput form-control"
                             type="date"
                             placeholder=""
-                            onChange={(evt) => {handleTimeFromInput(evt); console.log(store.getState())}}/>
+                            onChange={(evt) => {handleTimeFromInput(evt)}}/>
                     </label>
                     <div className="col-lg-6 time-to">
                     {this.state.toNow === false ?
@@ -43,7 +43,7 @@ export default class Time extends React.Component{
                                 className="simpleInput form-control"
                                 type="date"
                                 placeholder=""
-                                onChange={(evt) => {handleTimeToInput(evt); console.log(store.getState())}}/>
+                                onChange={(evt) => {handleTimeToInput(evt)}}/>
                         </label>
                         :
                         null

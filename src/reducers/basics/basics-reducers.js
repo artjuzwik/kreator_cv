@@ -1,4 +1,13 @@
-const BasicsReducer = (state = {}, action) => {
+const initState = {
+    basic:{
+        name:'',
+        secondName:'',
+        photoUrl:'',
+        email:'',
+        phoneNumber:''
+    }
+};
+const BasicsReducer = (state = initState, action) => {
     switch (action.type) {
         case 'ADD_NAME':
             return { ...state, basic: {...state.basic, name: action.payload} };

@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handleFieldInput } from '../../../../actions/education/field-actions/field-actions.jsx';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class Field extends React.Component{
     render(){
@@ -15,7 +14,7 @@ export default class Field extends React.Component{
                         className="simpleInput form-control"
                         type="email"
                         placeholder="Wpisz kierunek nauki"
-                        onChange={(evt) => {handleFieldInput(evt); console.log(store.getState())}}/>
+                        onChange={(evt) => {handleFieldInput(evt)}}/>
                 </label>
             </div>
         )

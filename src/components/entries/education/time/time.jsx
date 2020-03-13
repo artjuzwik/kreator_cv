@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { handleTimeFromInput , handleTimeToInput, handleTimeToNowInput } from '../../../../actions/employment/time-actions/time-actions.js';
 import '../../assets/common.scss';
-import {store} from "../../../../store/store";
 
 export default class Time extends React.Component{
     constructor(){
@@ -32,7 +31,7 @@ export default class Time extends React.Component{
                         className="simpleInput form-control"
                         type="date"
                         placeholder=""
-                        onChange={(evt) => {handleTimeFromInput(evt); console.log(store.getState())}}/>
+                        onChange={(evt) => {handleTimeFromInput(evt)}}/>
                 </label>
                 <div className="col-lg-6 time-to">
                     {this.state.toNow === false ?
@@ -42,7 +41,8 @@ export default class Time extends React.Component{
                                 className="simpleInput form-control"
                                 type="date"
                                 placeholder=""
-                                onChange={(evt) => {handleTimeToInput(evt); console.log(store.getState())}}/>
+                                pattern="\d{4}-\d{2}-\d{2}"
+                                onChange={(evt) => {handleTimeToInput(evt)}}/>
                         </label>
                         :
                         null

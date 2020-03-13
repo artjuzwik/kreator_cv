@@ -1,4 +1,14 @@
-const EducationReducer = (state = {}, action) => {
+const initState = {
+    education:{
+        school:'',
+        direction:'',
+        level:'',
+        timeFrom:'',
+        timeTo:''
+    },
+    educationArr:[]
+}
+const EducationReducer = (state = initState, action) => {
     switch(action.type) {
         case 'ADD_SCHOOL':
             return { ...state, education: {...state.education, school: action.payload } };
@@ -10,6 +20,11 @@ const EducationReducer = (state = {}, action) => {
             return { ...state, education: {...state.education, timeFrom: action.payload} };
         case 'ADD_TIME_TO':
             return { ...state, education: {...state.education, timeTo: action.payload} };
+        case 'ADD_EDUCATION_OBJ':
+            return { ...state, educationArr: [...state.educationArr,action.payload] };
+        case 'REMOVE_EDUCATION_OBJ':
+            delete state.educationArr[action.payload];
+            return { ...state, educationArr: [...state.educationArr ]};
         default:
             return state;
     }

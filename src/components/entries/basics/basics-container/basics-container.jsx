@@ -4,6 +4,7 @@ import Name from '../name/name.jsx';
 import Photo from '../photo/photo.jsx';
 import Email from '../email/email.jsx';
 import Number from '../number/number.jsx';
+import Nav from "../../../nav/nav";
 
 
 export default function BasicsContainer(){
@@ -15,6 +16,7 @@ export default function BasicsContainer(){
             <Photo />
             <Email />
             <Number />
+            <Nav />
         </div>
     )
 }
