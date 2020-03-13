@@ -7,7 +7,6 @@ import './school-list.scss';
 export default class SchoolList extends React.Component{
     render(){
         const { removeSchoolListItem } = this.props;
-        const propsItem = this.props.item;
         return(
             <div>
                 {this.props.item !== null && this.props.item !== undefined ?

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { handleTimeFromInput , handleTimeToInput, handleTimeToNowInput } from '../../../../actions/employment/time-actions/time-actions.js';
 import '../../assets/common.scss';
 import './time.scss';
-import {store} from "../../../../store/store";
 
 export default class Time extends React.Component{
     constructor(){
